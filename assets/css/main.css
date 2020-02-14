@@ -1,16 +1,194 @@
-#csv .droparea {
-  background-color: #cdcdcd;
-  width: 300px;
-  height: 50px;
-  margin: 5px;
+#csv {
+  margin: 5%;
 }
 
-#csv .drag-item {
+#csv .paste {
+  clear: both;
+}
+
+#csv .paste #textinput {
+  width: 450px;
+  height: 200px;
+}
+
+#csv .paste #output table {
+  border: 3px solid #003057;
+  background: #b3a369;
+}
+
+#csv .paste #output table tr:first-child {
+  font-size: 50px;
+  font-weight: 900px;
+}
+
+#csv .paste #output table tr td {
+  border: 3px solid #003057;
+}
+
+#csv .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#csv .container .left {
   float: left;
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+#csv .container .right {
+  float: left;
+  position: relative;
+  width: 40%;
+  margin-left: 5%;
+  height: 100%;
+}
+
+#csv .container #display {
+  background: #2d2d2d;
+  border: 10px solid #000000;
+  border-radius: 5px;
+  font-size: 2em;
+  color: white;
+  height: 100px;
+  min-width: 200px;
+  text-align: center;
+  padding: 1em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#csv .container #drag-elements {
+  background-color: #dfdfdf;
+  border-radius: 5px;
+  min-height: 50px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+#csv .container #drag-elements div {
+  text-align: center;
+  float: left;
+  padding: 1em;
+  margin: 0 1em 1em 0;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+  border: 2px solid #ececec;
+  background: #F7F7F7;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+#csv .container #drag-elements div:active {
+  -webkit-animation: wiggle 0.3s 0s infinite ease-in;
+  animation: wiggle 0.3s 0s infinite ease-in;
+  opacity: .6;
   border: 2px solid #000;
-  border-radius: 8px;
-  padding: 5px;
-  margin: 10px;
-  background-color: #fff;
+}
+
+#csv .container #drag-elements div:hover {
+  border: 2px solid gray;
+  background-color: #e5e5e5;
+}
+
+#csv .container #drop-target {
+  border: 2px dashed #D9D9D9;
+  border-radius: 5px;
+  min-height: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 2em;
+  display: block;
+  text-align: center;
+}
+
+#csv .container #drop-target div {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  text-align: center;
+  float: left;
+  padding: 1em;
+  margin: 0 1em 1em 0;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: 2px solid skyblue;
+  background: #F7F7F7;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#csv .container #drop-target div:active {
+  -webkit-animation: wiggle 0.3s 0s infinite ease-in;
+  animation: wiggle 0.3s 0s infinite ease-in;
+  opacity: .6;
+  border: 2px solid #000;
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(2deg);
+  }
+  75% {
+    -webkit-transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  75% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+#csv .gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  padding: 1em;
+}
+
+#csv .gu-hide {
+  display: none !important;
+}
+
+#csv .gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+#csv .gu-transit {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+
+#csv .gu-mirror {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
 }
 /*# sourceMappingURL=main.css.map */

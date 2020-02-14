@@ -20,6 +20,34 @@
     this.csv = $scope.$parent.csv;
 	var csv = this;
 	
+	function $(id) {
+		return document.getElementById(id);
+	  }
+	  
+	  dragula([$('drag-elements'), $('drop-target')], {
+		revertOnSpill: true
+	  })
+	//   .on('drop', function(el) {
+		// if ($('drop-target').children.length > 0) {
+		//   $('display').innerHTML = $('drop-target').innerHTML;
+		// } else {
+		//   $('display').innerHTML = "Display";
+		// }
+	  
+	//   });
+
+
+	// function createHeader() {
+	// 	var zone = document.getElementById('drop-target');
+	
+	// 	for (var h = 0; h <rows.length; h++) {
+	// 		th = document.createElement('th');
+
+	// 	}
+
+	// }
+
+
 	function makeTable(input) {
 
 		var rows = input.split('\n'),
@@ -54,96 +82,9 @@
 	  })
 
 
-	  $scope.$on('second-bag.drag', function (e, el) {
-		el.removeClass('ex-moved');
-	  });
-	
-	  $scope.$on('second-bag.drop', function (e, el) {
-		el.addClass('ex-moved');
-	  });
-	
-	  $scope.$on('second-bag.over', function (e, el, container) {
-		container.addClass('ex-over');
-	  });
-	
-	  $scope.$on('second-bag.out', function (e, el, container) {
-		container.removeClass('ex-over');
-	  });
+	 
+
+
 	});
-	
-	csv.controller('AnotherExampleCtrl', ['$scope', 'dragulaService',
-	  function ($scope, dragulaService) {
-		dragulaService.options($scope, 'third-bag', {
-		  removeOnSpill: true
-		});
-	  }
-	]);
-	
-	csv.controller('SuchExampleCtrl', ['$scope', 'dragulaService',
-	  function ($scope, dragulaService) {
-		dragulaService.options($scope, 'fourth-bag', {
-		  revertOnSpill: true
-		});
-	  }
-	]);
-	
-	csv.controller('VeryExampleCtrl', ['$scope', 'dragulaService',
-	  function ($scope, dragulaService) {
-		dragulaService.options($scope, 'fifth-bag', {
-		  copy: true
-		});
-	  }
-	]);
-	
-	csv.controller('MuchExampleCtrl', ['$scope', 'dragulaService',
-	  function ($scope, dragulaService) {
-		dragulaService.options($scope, 'sixth-bag', {
-		  moves: function (el, container, handle) {
-			return handle.classList.contains('handle');
-		  }
-		});
-	  }
-	]);
-	
-	csv.controller('WowExampleCtrl', ['$scope', '$timeout',
-	  function ($scope, $timeout) {
-		$scope.onclick = onclick;
-	
-		function onclick () {
-		  $scope.clicked = true;
-		  $timeout(function offclick () {
-			$scope.clicked = false;
-		  }, 2000);
-		}
-	  }
-	]);
-	
-	csv.controller('RepeatCtrl', ['$scope',
-	  function ($scope) {
-		$scope.many = ['The', 'possibilities', 'are', 'endless!'];
-		$scope.many2 = ['Explore', 'them'];
-	  }
-	]);
-	
-	csv.controller('NestedRepeatCtrl', ['$scope',
-	  function ($scope) {
-		$scope.groups = [
-		  {
-			name: 'Group A',
-			items: [{name: 'Item A'},{name: 'Item B'},{name: 'Item C'},{name: 'Item D'}]
-		  },
-		  {
-			name: 'Group B',
-			items: [{name: 'Item 1'},{name: 'Item 2'},{name: 'Item 3'},{name: 'Item 4'}]
-		  }
-		];
-	
-		$scope.$on('nested-bag.drop', function(e, el, container, source) {
-		  console.log(container.scope());
-		});
-
-
-
-	}]);
 
 })();

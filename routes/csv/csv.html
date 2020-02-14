@@ -1,21 +1,31 @@
 <div id="csv" ng-controller="csvCtrl as csv">
-    <div  class="title">Choose Your Headers</div>
-    <div class="tag-names droparea" dragula="bag-one">
-       <div class="drag-item">Date</div>
-       <div class="drag-item">Name</div>
-       <div class="drag-item">Room</div>
+  <div class="container">
+    <div class="left">
+      <div id="drag-elements">
+        <div>Date</div>
+        <div>Name</div>
+        <div>Occupation</div>
+        <div>Room</div>
+        <div>Contact</div>
+        <div>Email</div>
+      </div>
+  
+      <div id="drop-target"></div>
     </div>
-    <div class="droparea" dragula="bag-one"></div>
+  </div>
 
-
+<div class="paste">
+<br>
+<br>
+<br>
 <p>Please enter your csv contents here</p>
 <form id="getcontents">
-    <textarea type='text' id="textinput"></textarea><br>
+    <textarea type='text' id="textinput"></textarea><br><br>
     <input type="button" id="csvcontents" value="Submit"/>
   </form><br>
   <div id="tabletitle">
     <p>Here is your output in table form:</p>
   </div>
   <div id="output"></div> 
-
+</div>
 </div>

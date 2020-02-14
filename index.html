@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="appCtrl as app">
+
+<head>
+	<base href="/">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Department of Digital Signage Technology - Client Portal</title>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<!-- AJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+<!-- Additional AJS Modules -->
+	<script src="assets/js/angular//ui.router.js"></script>
+<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+<!-- ----------------------------------------------------------------------------------------------- -->
+</head>
+
+<body>
+    <a ui-sref="csv"> Open Me!</a>
+	<ui-view>
+		<!-- Route-specific html goes here. -->
+	</ui-view>
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+<!-- ------------------------------------------------------------------------------------------------->
+<!-- APP -->
+	<script src="app.js"></script>
+<!-- ROUTES -->
+	<script src="routes/csv/csv.js"></script>
+
+<!-- DRAGULA -->
+	<script src="assets/js/dragula/angularjs-dragula.js"></script>
+	<script src="assets/js/dragula/drag.js"></script>
+	<!-- DIRECTIVES -->
+	<script src="assets/js/dragula/directive/directive.js"></script>
+	<!-- SERVICES -->
+	<script src="assets/js/dragula/services/service.js"></script>
+
+
+
+</html>

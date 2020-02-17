@@ -1,21 +1,50 @@
 <div id="csv" ng-controller="csvCtrl as csv">
+  
+  
   <div class="container">
+
+    <div id="myDIV" class="header">
+      <h2 style="margin:5px">My To Do List</h2>
+      <input type="text" id="myInput" placeholder="Title...">
+      <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
+    </div>
+    <br>
+    <br>
+    <br>
+    
     <div class="left">
       <div id="drag-elements">
-        <div>Date</div>
-        <div>Name</div>
-        <div>Occupation</div>
-        <div>Room</div>
-        <div>Contact</div>
-        <div>Email</div>
+        <li>Date</li>
+        <li>Name</li>
+        <li>Occupation</li>
+        <li>Room</li>
+        <li>Contact</li>
+        <li>Email</li>
       </div>
   
       <div id="drop-target"></div>
     </div>
   </div>
+  <div class="btn">
+    <button ng-click="newElement()">&#43;</button><br>
+    <button>&#128465;</button>
+  </div>
+  
+  <div class="tagform" formCreate="">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="button" id="Submit" value="Submit">
+  </div>
+
 
 <div class="paste">
 <br>
+<br>
+  <hr>
 <br>
 <br>
 <p>Please enter your csv contents here</p>

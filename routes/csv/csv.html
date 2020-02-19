@@ -1,12 +1,12 @@
 <div id="csv" ng-controller="csvCtrl as csv">
   
-  
+  <h1>Directory Upload</h1>
   <div class="container">
 
     <div id="myDIV" class="header">
-      <h2 style="margin:5px">My To Do List</h2>
+      <h2 style="margin:5px">Add a New Tag Name!</h2>
       <input type="text" id="myInput" placeholder="Title...">
-      <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
+      <button ng-click="newElement()" class="addBtn">Add</button>
     </div>
     <br>
     <br>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="btn">
-    <button ng-click="newElement()">&#43;</button><br>
+    <button ng-click="openUp()">&#43;</button><br>
     <button>&#128465;</button>
   </div>
   
@@ -50,7 +50,7 @@
 <p>Please enter your csv contents here</p>
 <form id="getcontents">
     <textarea type='text' id="textinput"></textarea><br><br>
-    <input type="button" id="csvcontents" value="Submit"/>
+    <input type="button" id="csvcontents" value="Submit" ng-click="makeTable()"/>
   </form><br>
   <div id="tabletitle">
     <p>Here is your output in table form:</p>

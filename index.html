@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <!-- CSS -->
 <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="directory/css/directory.css">
 <!-- AJS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
 <!-- Additional AJS Modules -->
@@ -21,7 +22,8 @@
 </head>
 
 <body>
-    <a ui-sref="csv"> Open Me!</a>
+	<a ui-sref="csv"> Open Me!</a>
+	<a ui-sref="directory">directory</a>
 	<ui-view>
 		<!-- Route-specific html goes here. -->
 	</ui-view>
@@ -34,6 +36,7 @@
 	<script src="app.js"></script>
 <!-- ROUTES -->
 	<script src="routes/csv/csv.js"></script>
+	<script src="directory/routes/dir.js"></script>
 <!-- DIRECTIVES AND SERVICES -->
 <script src="assets/js/directives-services/formCreate.js"></script>
 

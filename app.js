@@ -4,7 +4,11 @@
 	// AJS modules
 		"ui.router",
 	//routes
-		"csv"
+		"csv",
+
+		"directory",
+
+		"keyboard"
 		
 	]);
 

@@ -1,5 +1,16 @@
 #csv {
     margin:5%;
+
+    #myDIV{
+        display:none;
+       
+    }
+    .header{
+        background-color: #003057;
+        padding:0;
+        max-width: 400px;
+    }
+    
     //btn for drag n drop
     .btn{
         button{
@@ -108,12 +119,14 @@
                 background: #F7F7F7;
                 transition: all .5s ease;
                 cursor: pointer;
+                list-style-type:none;
 
                 &:active {
                     -webkit-animation: wiggle 0.3s 0s infinite ease-in;
                     animation: wiggle 0.3s 0s infinite ease-in;
                     opacity: .6;
                     border: 2px solid #000;
+                    list-style-type:none;
                 }
 
                 &:hover {
@@ -157,6 +170,7 @@
                 border: 2px solid skyblue;
                 background: #F7F7F7;
                 transition: all .5s ease;
+                list-style-type:none;
 
 
                 &:active {
@@ -164,6 +178,7 @@
                     animation: wiggle 0.3s 0s infinite ease-in;
                     opacity: .6;
                     border: 2px solid #000;
+                    list-style-type:none;
                 }
             }
         }

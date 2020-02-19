@@ -1,0 +1,74 @@
+#directory{
+    .container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 10% 750px 10%;
+        overflow:hidden;
+        div{
+            text-align: center;
+        }
+        .title{
+            grid-row-start: 1;
+            grid-row-end: 1;
+            grid-column-start:1;
+            grid-column-end: 5;
+            background-color: purple;
+            position:relative;
+            
+            p{
+                padding:1% 0;
+            }
+        }
+        .hero-img{
+            grid-row-start: 2;
+            grid-row-end: 2;
+            grid-column-start:1;
+            grid-column-end: 4;
+            background-color: blue;
+            clear:both;
+            padding:30% 0;
+           
+        }
+        .touch1{
+            grid-row-start: 2;
+            grid-row-end: 2;
+            grid-column-start:4;
+            grid-column-end: 4;
+            background-color: green;
+            clear:both;
+            
+            .order{
+                grid-template-columns: auto ;
+                grid-template-rows: auto auto auto auto auto auto auto auto auto auto ;
+                grid-gap:0;
+                .head{
+                    font-weight:700;
+                    font-size:3rem;
+
+                }
+                .list {
+                    border: 2px solid #cccccc;
+                    padding:20px;
+                    margin:0;
+                    font-size:2rem;
+                    &:active {
+                        background-color: #cccccc;
+                    }
+                }
+            }
+           
+        }
+        .touch2{
+            grid-row-start: 3;
+            grid-row-end: 3;
+            grid-column-start:1;
+            grid-column-end: 5;
+            background-color: yellow;
+            clear:both;
+            p{
+                padding:1% 0;
+            }
+         
+        }
+    }
+}

@@ -2,6 +2,16 @@
   margin: 5%;
 }
 
+#csv #myDIV {
+  display: none;
+}
+
+#csv .header {
+  background-color: #003057;
+  padding: 0;
+  max-width: 400px;
+}
+
 #csv .btn button {
   font-size: 38px;
   background-color: transparent;
@@ -106,6 +116,7 @@
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   cursor: pointer;
+  list-style-type: none;
 }
 
 #csv .container #drag-elements li:active {
@@ -113,6 +124,7 @@
   animation: wiggle 0.3s 0s infinite ease-in;
   opacity: .6;
   border: 2px solid #000;
+  list-style-type: none;
 }
 
 #csv .container #drag-elements li:hover {
@@ -145,6 +157,7 @@
   background: #F7F7F7;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+  list-style-type: none;
 }
 
 #csv .container #drop-target li:active {
@@ -152,6 +165,7 @@
   animation: wiggle 0.3s 0s infinite ease-in;
   opacity: .6;
   border: 2px solid #000;
+  list-style-type: none;
 }
 
 @-webkit-keyframes wiggle {

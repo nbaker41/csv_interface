@@ -1,3 +1,73 @@
+.keyboard-container {
+  display: inline-block;
+  text-align: center;
+  background: #4d4d4d;
+}
+
+.keyboard-container ul {
+  padding-left: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.keyboard-container ul li.btn {
+  background-color: gray;
+  display: inline-block;
+  width: 90px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-left: 5px;
+  border-radius: 3px;
+  border: solid 1px black;
+}
+
+.keyboard-container ul li.btn:hover {
+  background-color: aliceblue;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydiv #mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+#mydiv.other {
+  top: 0;
+  left: 0;
+}
+
+#mydiv.other #mydivheader {
+  background: red;
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  #directory .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  #directory .container .touch1 {
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+    grid-row-end: 3;
+  }
+}
+
 #directory .container {
   display: -ms-grid;
   display: grid;
@@ -40,6 +110,8 @@
 }
 
 #directory .container .touch1 {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-row: 2;
       grid-row-start: 2;
   grid-row-end: 2;
@@ -50,12 +122,17 @@
   clear: both;
 }
 
+#directory .container .touch1 hr {
+  margin: 0;
+}
+
 #directory .container .touch1 .order {
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   -ms-grid-rows: auto auto auto auto auto auto auto auto auto auto;
       grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
-  grid-gap: 0;
+  row-gap: 5px;
+  color: white;
 }
 
 #directory .container .touch1 .order .head {
@@ -63,15 +140,56 @@
   font-size: 3rem;
 }
 
-#directory .container .touch1 .order .list {
-  border: 2px solid #cccccc;
+#directory .container .touch1 .order .list1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  padding: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #242733;
+}
+
+#directory .container .touch1 .order .list1:active {
+  background-color: #cccccc;
+}
+
+#directory .container .touch1 .order .list2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 2;
   padding: 20px;
   margin: 0;
   font-size: 2rem;
+  cursor: pointer;
+  background-color: #242733;
 }
 
-#directory .container .touch1 .order .list:active {
+#directory .container .touch1 .order .list2:active {
   background-color: #cccccc;
+}
+
+#directory .container .touch1 .order .list3 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 3;
+  padding: 20px;
+  margin: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #242733;
+}
+
+#directory .container .touch1 .order .list3:active {
+  background-color: #cccccc;
+}
+
+#directory .container .touch1 .order .search {
+  bottom: 2px;
+}
+
+#directory .container .touch1 .order input {
+  width: 100%;
 }
 
 #directory .container .touch2 {

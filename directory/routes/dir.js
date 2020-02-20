@@ -16,9 +16,14 @@
  dir
 	dir.controller(
     "dirCtrl",
-    function ($scope, $stateParams) {
+    function ($scope, $http) {
     this.dir = $scope.$parent.dir;
 	var dir = this;
+
+	$http.get('../assets/data/data.json').then(function(response) {
+		$scope.staff = response.data;
+		$scope.staffOrder = 'name';
+	});
 	
 
 	//   .on('drop', function(el) {

@@ -1,0 +1,19 @@
+[{
+        "name": "Michael Jordan",
+        "occupation": "Facilities Supervisor",
+        "room": "300",
+        "floor": "3rd Floor"
+    },
+    {
+        "name": "Felicia Harding",
+        "occupation": "Communications Officer",
+        "room": "221",
+        "floor": "2nd Floor"
+    },
+    {
+        "name": "Tanya Brookes",
+        "occupation": "Counsellor",
+        "room": "141",
+        "floor": "1st Floor"
+    }
+]

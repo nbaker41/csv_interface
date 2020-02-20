@@ -10,7 +10,7 @@
           // populate the keyboard template with character data from external json file.
                $http({
                     method: 'GET',
-                    url: 'components/keyboard/keyboard.json'
+                    url: 'directory/component/keyboard/keyboard.json'
                }).then(function (response) {
                     keyboard.layout = response.data;
                     console.log(keyboard.layout);
@@ -82,7 +82,7 @@
      keyboard.component("keyboard", {
           controller: "keyboardCtrl",
           controllerAs: "keyboard",
-          templateUrl: "components/keyboard/keyboard.html"
+          templateUrl: "directory/component/keyboard/keyboard.html"
      });
 
 

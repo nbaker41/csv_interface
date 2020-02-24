@@ -1,48 +1,70 @@
 #csv {
-    margin:5%;
+    margin: 5%;
 
-    #myDIV{
-        display:none;
-       
+
+    #myDIV {
+        display: none;
     }
-    .header{
-        background-color: #003057;
-        padding:0;
-        max-width: 400px;
+
+    .header {
+        border: 2px solid #b3a369;
+        max-width: 34%;
+        padding:0 15px 15px;
+        
+
+
+        .text {
+            font-weight: 700;
+            font-size:20px;
+        }
+        
+        .closebtn{
+            float:right;
+            border:none;
+            background-color:transparent;
+        }
+
+        
+        
     }
-    
+
+
     //btn for drag n drop
-    .btn{
-        button{
-        font-size: 38px;
-        background-color: transparent;
-        border: transparent;
-        margin:1px 0 0;
-        padding:5px 10px;
-        clear:both;
+    .btn {
+        button {
+            font-size: 38px;
+            background-color: transparent;
+            border: transparent;
+            margin: 1px 0 0;
+            padding: 5px 10px;
+            clear: both;
+        }
     }
-    }
-    #Submit{
-        clear:both;
-        float:left;
-        margin-top:5%;
-        padding:8px;
+
+    #Submit {
+        clear: both;
+        float: left;
+        margin-top: 5%;
+        padding: 8px;
         border: 2px solid #b3a369;
         border-radius: 8px;
         background: transparent;
         font-weight: 700;
-       
+
 
     }
+
     //csv copy and paste
     .paste {
         clear: both;
-        #textinput{
-            width:450px;
+
+        #textinput {
+            width: 450px;
             height: 200px;
         }
-        #csvcontents{
-            padding:8px;
+
+        #csvcontents {
+            padding: 8px;
             border: 2px solid #b3a369;
             border-radius: 8px;
             background: transparent;
@@ -50,25 +72,26 @@
         }
 
         #output {
-            table{
-                border:3px solid #003057;
-                background:#b3a369;
-          
-            tr{
-                border:1px solid #003057;
-                &:first-child{
-                    font-size:30px;
-                    font-weight:900px;
-                    
+            table {
+                border: 3px solid #003057;
+                background: #b3a369;
+
+                tr {
+                    border: 1px solid #003057;
+
+                    &:first-child {
+                        font-size: 30px;
+                        font-weight: 900px;
+
+                    }
                 }
-            }
             }
         }
 
     }
 
     //drag and drop
-    .container {     
+    .container {
         margin: 0 auto;
 
         .left {
@@ -119,14 +142,14 @@
                 background: #F7F7F7;
                 transition: all .5s ease;
                 cursor: pointer;
-                list-style-type:none;
+                list-style-type: none;
 
                 &:active {
                     -webkit-animation: wiggle 0.3s 0s infinite ease-in;
                     animation: wiggle 0.3s 0s infinite ease-in;
                     opacity: .6;
                     border: 2px solid #000;
-                    list-style-type:none;
+                    list-style-type: none;
                 }
 
                 &:hover {
@@ -170,7 +193,7 @@
                 border: 2px solid skyblue;
                 background: #F7F7F7;
                 transition: all .5s ease;
-                list-style-type:none;
+                list-style-type: none;
 
 
                 &:active {
@@ -178,7 +201,7 @@
                     animation: wiggle 0.3s 0s infinite ease-in;
                     opacity: .6;
                     border: 2px solid #000;
-                    list-style-type:none;
+                    list-style-type: none;
                 }
             }
         }

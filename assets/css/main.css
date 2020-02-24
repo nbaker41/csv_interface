@@ -7,9 +7,20 @@
 }
 
 #csv .header {
-  background-color: #003057;
-  padding: 0;
-  max-width: 400px;
+  border: 2px solid #b3a369;
+  max-width: 34%;
+  padding: 0 15px 15px;
+}
+
+#csv .header .text {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#csv .header .closebtn {
+  float: right;
+  border: none;
+  background-color: transparent;
 }
 
 #csv .btn button {

@@ -4,40 +4,45 @@
   <div class="container">
 
     <div id="myDIV" class="header">
-      <h2 style="margin:5px">Add a New Tag Name!</h2>
+      <p class="text">Add a New Tag Name!</p><button class="closebtn close">&#10005;</button>
       <input type="text" id="myInput" placeholder="Title...">
       <button ng-click="newElement()" class="addBtn">Add</button>
     </div>
+
+
     <br>
     <br>
     <br>
-    
+  <!-- TAG NAMES -->
     <div class="left">
       <div id="drag-elements">
-        <li>Date</li>
-        <li>Name</li>
-        <li>Occupation</li>
-        <li>Room</li>
-        <li>Contact</li>
-        <li>Email</li>
+        <li ng-repeat="x in csv.list">
+          {{x}}
+          <span ng-if="csv.bool" ng-click="csv.delete()">&#10005;</span>
+        </li>
       </div>
   
       <div id="drop-target"></div>
     </div>
   </div>
+
+  <!-- BUTTONS FOR DROPZONE -->
+  
   <div class="btn">
     <button ng-click="openUp()">&#43;</button><br>
-    <button>&#128465;</button>
+    <button ng-click="csv.addx()">&#8722;</button>
   </div>
+
+ 
   
-  <div class="tagform" formCreate="">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <input type="button" id="Submit" value="Submit">
+  
+  
+  <div class="tagform" >
+  
+    <input type="button" id="Submit" value="Submit" ng-click="{{csv.formCreate()}}">
+  </div>
+  <div id="formHere">
+
   </div>
 
 

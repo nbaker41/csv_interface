@@ -6,10 +6,6 @@
 		//routes
 		"csv",
 
-		"directory",
-
-		"keyboard"
-
 	]);
 
 	app.config(function ($locationProvider, $urlRouterProvider) {
@@ -34,37 +30,6 @@
 				app.pageClass = app.route.to;
 			});
 
-
-
-			// // routes -> menu
-			// 	app.menu = [
-			// 		{
-			// 			"name": "Home",
-			// 			"route": "home"
-			// 		},
-			// 		{
-			// 			"name": "Login",
-			// 			"route": "login"
-			// 		},
-			// 		{
-			// 			"name": "Register",
-			// 			"route": "register"
-			// 		},
-			// 		{
-			// 			"name": "Portal",
-			// 			"route": "portal"
-			// 		},
-			// 		{
-			// 			"name": "Blob Upload",
-			// 			"route": "upload"
-			// 		}
-			// 	];
-
-			// // handle the clock
-			// 	app.tick = setInterval(function () {
-			// 		app.currentTime = new Date();
-			// 		$scope.$apply();
-			// 	}, 1000);
 		});
 
 })();

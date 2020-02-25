@@ -1,25 +1,23 @@
-(function() {
+(function(){
 
+	let formCreate = angular.module(
+	"formCreate", [
+	]);
 
-    var app = angular.module('formCreateDirective', []);
+formCreate.directive('formCreate', function() {
+  return {
+    restrict:'E',
+   link: function($scope, elem, attrs){
+    csv.formCreate( "create", function () {
 
-    app.controller('formCtrl', ['$scope', function($scope)  {
-        var app = this;
-        // var id = document.getElementById(id).value;
-        // var form = document.createElement(FORM);
-        // inp.setAttribute("type", "text");
-        var form = document.createElement(FORM);
-        app.formCreate = function() {
-        var inp = document.createElement(INPUT);
-        inp.setAttribute("type", "text");
-        inp.setAttribute("value", "Bad Juju...")
-        }
-        app.scrape = form.appendChild(inp);
+        var x = document.createElement("INPUT");
+        x.setAttribute("type", "text");
+        x.setAttribute("value", "Hello World!");
+        document.getElementById("fromHere").appendChild(x);
 
-    }])
-    app.directive('formCreateDirective', function(){
-        return {
-            template: ''
-        }
     })
+
+   }
+}
 })
+});

@@ -12,12 +12,33 @@
 				controllerAs: "csv"
 			})
 	});
-	csv
+
+
 	csv.controller(
 		"csvCtrl",
-		function ($scope, $stateParams) {
+		function ($scope, $http) {
 			this.csv = $scope.$parent.csv;
 			var csv = this;
+
+
+			csv.send = function() {
+				const form = document.getElementsByClassName()
+
+			}
+
+
+
+			//GET STAFF INFORMATION
+			$http.get('assets/data/data.json').then(function(response) {
+				$scope.staff = response.data;
+				$scope.staffOrder = 'name';
+			});
+
+
+
+
+
+
 
 			//DEFAULT LIST OF NAMES
 			csv.list = [
@@ -34,52 +55,48 @@
 
 
 
-			csv.formCreate = function () {
-				var x = document.createElement("INPUT");
-				x.setAttribute("type", "text");
-				x.setAttribute("value", "Hello World!");
-				document.getElementById('fromHere').appendChild(x);
-			}
+
+
+
+
+			
+
+
+
+
+
+
+
+			
 			//ADD DELETE BUTTON TO LIST
 			csv.bool = false;
 			csv.addx = function () {
 				if (csv.bool == false){
+					document.getElementById('drag-elements');
 					csv.bool = true;
 				} else {
 					csv.bool = false;
 				}
 
-			var remove = document.getElementsByTagName(span);
+			}
+
 			csv.delete = function () {
-				for (i = 0; i < close.length; i++) {
-
+				var close = document.getElementsByClassName("close");
+				var i;
+			for (i = 0; i < close.length; i++) {
+				close[i].onclick = function () {
+					var div = this.parentElement;
+					div.style.display = "none";
+				}
 			}
-		}
-				// var myNodelist = document.getElementsByTagName("LI");
-				// var i;
-				// for (i = 0; i < myNodelist.length; i++) {
-				// 	var span = document.createElement("SPAN");
-				// 	var txt = document.createTextNode("\u00D7");
-				// 	span.className = "close";
-				// 	span.appendChild(txt);
-				// 	myNodelist[i].appendChild(span);
-				// }
-
-				// //FUNCTIONALITY OF DELETE BUTTON
-				// for (i = 0; i < close.length; i++) {
-				// 	close[i].onclick = function () {
-				// 		var div = this.parentElement;
-				// 		div.style.display = "none";
-				// 	}
-				// }
-
-				// if (myNode[i].appendChild(span)==true) {
-				// 	remove();
-				// }
-
-
-
+				
 			}
+
+
+			
+
+
+
 
 
 
@@ -120,17 +137,10 @@
 
 
 
-			//New List Addition	 
-			// Create a "close" button and append it to each list item
-			var myNodelist = document.getElementsByTagName("LI");
-			var i;
-			for (i = 0; i < myNodelist.length; i++) {
-				var span = document.createElement("SPAN");
-				var txt = document.createTextNode("\u00D7");
-				span.className = "close";
-				span.appendChild(txt);
-				myNodelist[i].appendChild(span);
-			}
+
+
+
+			
 
 			// Click on a close button to hide the current list item
 			var close = document.getElementsByClassName("close");
@@ -143,7 +153,7 @@
 			}
 
 			// Create a new list item when clicking on the "Add" button
-			$scope.newElement = function () {
+			csv.newElement = function () {
 				var li = document.createElement("LI");
 				var inputValue = document.getElementById("myInput").value;
 				var t = document.createTextNode(inputValue);
@@ -154,19 +164,6 @@
 					document.getElementById("drag-elements").appendChild(li);
 				}
 				document.getElementById("myInput").value = "";
-
-				// var span = document.createElement("SPAN");
-				// var txt = document.createTextNode("\u00D7");
-				// span.className = "close";
-				// span.appendChild(txt);
-				// li.appendChild(span);
-
-				// for (i = 0; i < close.length; i++) {
-				// 	close[i].onclick = function () {
-				// 		var div = this.parentElement;
-				// 		div.style.display = "none";
-				// 	}
-				// }
 			}
 
 			//OPENS ADD TAG DIV

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='test.css'>
+    <script src='test.js'></script>
+</head>
+<body>
+    <div class="form">
+        <label for="text">Enter Info</label>
+        <input id="text" type="text">
+        <input type="button" value="Submit">
+    </div>
+
+
+
+
+    <script>
+        function manifest() {
+            var x = document.createElement("FORM");
+            var inp = documnet.createElement("INPUT");
+            inp.setAttribute('type','text');
+            inp.setAttribute('value', 'Hello');
+
+            x.appendChild(inp);
+
+        }
+    </script>
+</body>
+</html>

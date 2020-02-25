@@ -6,7 +6,7 @@
     <div id="myDIV" class="header">
       <p class="text">Add a New Tag Name!</p><button class="closebtn close">&#10005;</button>
       <input type="text" id="myInput" placeholder="Title...">
-      <button ng-click="newElement()" class="addBtn">Add</button>
+      <button ng-click="csv.newElement()" class="addBtn">Add</button>
     </div>
 
 
@@ -18,7 +18,7 @@
       <div id="drag-elements">
         <li ng-repeat="x in csv.list">
           {{x}}
-          <span ng-if="csv.bool" ng-click="csv.delete()">&#10005;</span>
+          <span class="close" ng-if="csv.bool" ng-click="csv.delete()">&#10005;</span>
         </li>
       </div>
   
@@ -38,28 +38,40 @@
   
   
   <div class="tagform" >
-  
-    <input type="button" id="Submit" value="Submit" ng-click="{{csv.formCreate()}}">
+  {{csv.formCreate()}}
+    <input type="button" id="Submit" value="Submit" ng-click="formCreate()">
   </div>
   <div id="formHere">
 
   </div>
 
 
+
+
 <div class="paste">
 <br>
-<br>
   <hr>
-<br>
 <br>
 <p>Please enter your csv contents here</p>
 <form id="getcontents">
     <textarea type='text' id="textinput"></textarea><br><br>
     <input type="button" id="csvcontents" value="Submit" ng-click="makeTable()"/>
-  </form><br>
+  </form>
+  
+  
+  <br>
+
+
   <div id="tabletitle">
     <p>Here is your output in table form:</p>
   </div>
   <div id="output"></div> 
 </div>
 </div>
+
+<!-- 
+<form method="POST" action="/assets/data/data.json">
+  <label for="push">Name</label>
+  <input name="name" type="text" id="push">
+  <input type="button" id="csvsubmission" value="Submit" ng-click="csv.send()">
+</form> -->
